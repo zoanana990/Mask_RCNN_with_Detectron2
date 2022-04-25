@@ -126,7 +126,7 @@ if you have some question, please watching it
   * [Using Machine Learning with Detectron2](https://www.youtube.com/watch?v=eUSgtfK4ivk&ab_channel=MetaOpenSource)
   * [DETECTRON2 Custom Object Detection, Custom Instance Segmentation: Part I](https://www.youtube.com/watch?v=ffTURA0JM1Q&ab_channel=TheCodingBug)
   * [DETECTRON2 Custom Object Detection, Custom Instance Segmentation: Part II](https://www.youtube.com/watch?v=GoItxr16ae8&ab_channel=TheCodingBug)
-* if you want to use [Swin Transformer](https://arxiv.org/pdf/2111.09883.pdf), please custome backbone and config file, [here](https://github.com/xiaohu2015/SwinT_detectron2) is an example
+* if you want to use [Swin Transformer](https://arxiv.org/pdf/2111.09883.pdf), please custom backbone and config file, [here](https://github.com/xiaohu2015/SwinT_detectron2) is an example
 ## Citation
 [Labelme](https://github.com/wkentaro/labelme)
 ```
