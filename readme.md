@@ -16,6 +16,9 @@ pip install labelme, opencv-python, colorama, matplotlib
 ```
 
 ## Dataset
+```
+git clone https://github.com/wkentaro/labelme.git
+```
 ### Convert Labelme to COCO Dataset
 Format:
 ```
@@ -125,3 +128,28 @@ if you have some question, please watching it
   * [Using Machine Learning with Detectron2](https://www.youtube.com/watch?v=eUSgtfK4ivk&ab_channel=MetaOpenSource)
   * [DETECTRON2 Custom Object Detection, Custom Instance Segmentation: Part I](https://www.youtube.com/watch?v=ffTURA0JM1Q&ab_channel=TheCodingBug)
   * [DETECTRON2 Custom Object Detection, Custom Instance Segmentation: Part II](https://www.youtube.com/watch?v=GoItxr16ae8&ab_channel=TheCodingBug)
+
+## Citation
+[Labelme](https://github.com/wkentaro/labelme)
+```
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Wada"
+  given-names: "Kentaro"
+  orcid: "https://orcid.org/0000-0002-6347-5156"
+title: "Labelme: Image Polygonal Annotation with Python"
+doi: 10.5281/zenodo.5711226
+url: "https://github.com/wkentaro/labelme"
+license: GPL-3
+```
+[Detectron2](https://github.com/facebookresearch/detectron2)
+```
+@misc{wu2019detectron2,
+  author =       {Yuxin Wu and Alexander Kirillov and Francisco Massa and
+                  Wan-Yen Lo and Ross Girshick},
+  title =        {Detectron2},
+  howpublished = {\url{https://github.com/facebookresearch/detectron2}},
+  year =         {2019}
+}
+```
