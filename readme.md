@@ -62,22 +62,6 @@ json statistic, data augmentation, and so on...
 
     ![](./Sample/images/Binary_Mask.png)
 
-### In our Cases
-10600.jpg, DICE Coefficient = 0.90680
-* Input:
-
-    ![](./Data/Fold/F3/JPEGImages/10600.jpg)
-
-* Prediction:
-
-    ![](./output/F3/Result/10600.jpg)
-* Binary Mask:
-
-    ![](./output/F3/Mask/10600.jpg)
-* Ground Truth:
-    
-    ![](./Data/Fold/F3/Visualization/10600.jpg)
-
 ## Result
 ### Fold Training
 Backbone: X-101-FPN
