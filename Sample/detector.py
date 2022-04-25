@@ -11,7 +11,6 @@ import matplotlib.pyplot as plt
 
 def showMask(outputs):
         mask = outputs["instances"].to("cpu").get("pred_masks").numpy()
-        #这里的mask的通道数与检测到的示例的个数一致，把所有通道的mask合为一个通道
         img = np.zeros((mask.shape[1],mask.shape[2]))
         for i in range(mask.shape[0]):
                 img += mask[i]
