@@ -119,7 +119,7 @@ Backbone: X-101-FPN
 
 * The basic code is in [trainer.py](trainer.py)
 
-* if you do not want to use Mask RCNN, please go to model_zoo
+* if you do not want to use Mask RCNN, please go to [model_zoo](https://github.com/facebookresearch/detectron2/blob/main/MODEL_ZOO.md)
 
 * Here are TUTORIAL, 
 if you have some question, please watching it
