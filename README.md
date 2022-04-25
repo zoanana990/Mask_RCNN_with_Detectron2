@@ -15,19 +15,24 @@ pip install detectron2 -f   https://dl.fbaipublicfiles.com/detectron2/wheels/cu1
 pip install labelme opencv-python colorama matplotlib
 ```
 
-## Dataset
+##
+```
+git clone https://github.com/zoanana990/Mask_RCNN_with_Detectron2.git
+cd Mask_RCNN_with_Detectron2
+```
+### Dataset
 Using Labelme to annotate images and convert to COCO Format
 ```
 git clone https://github.com/wkentaro/labelme.git
 ```
-### Convert Labelme to COCO Dataset
+#### Convert Labelme to COCO Dataset
 Format:
 ```
 python3 ./labelme/examples/instance_segmentation/labelme2coco.py <input/data/folder> <output/data/folder> --labels ./labels.txt
 ```
 Example:
 ```
-python3 ./labelme/examples/instance_segmentation/labelme2coco.py ./Data/Original/F1 ./Data/Fold/F1 --labels ./labels.txt
+python3 ./labelme/examples/instance_segmentation/labelme2coco.py ./Data/Example ./Data/Fold/COCO --labels ./labels.txt
 ```
 labels.txt Format:
 ```
@@ -37,7 +42,7 @@ class2
 ...
 ```
 
-### Convert ground truth mask
+#### Convert ground truth mask
 * use [convert_to_mask.py](./convert_to_mask.py)
 
   ![img.png](Sample/img.png)
@@ -45,12 +50,12 @@ class2
 * The `'.json'` file will be generated to mask, 
 and we will use the `'label.png'` to compute dice coefficient
 
-### Anchor Statistic
+#### Anchor Statistic
 Please use [preprocessing.py](./Data/preprocessing.py), which is used to do json resize, 
 json statistic, data augmentation, and so on... 
 
-## Example for the functions
-### MOMOLAND
+### Example for the functions
+#### MOMOLAND
 * Input:
 
     ![](./Sample/images/Input.jpg)
@@ -63,8 +68,8 @@ json statistic, data augmentation, and so on...
 
     ![](./Sample/images/Binary_Mask.png)
 
-## Result
-### Fold Training
+### Result
+#### Fold Training
 Backbone: X-101-FPN
 
 | Fold Number | mAP    | Dice  | FPS  | AP.50  | AP.75  | AP small | AP medium | AP large | 
@@ -74,7 +79,7 @@ Backbone: X-101-FPN
 | Fold 3      | 90.978 | 95.30 | 8.16 | 98.896 | 96.443 | 57.554   | 81.672    | 95.289   |
 | Fold 4      | 89.222 | 95.39 | 8.16 | 98.475 | 94.609 | 31.970   | 80.763    | 95.605   |
 
-#### For Different Class
+##### For Different Class
 | Fold Number | AP Uneven | AP Uncover | AP scratch  | Dice Uneven  | Dice Uncover | Dice Scratch | 
 |-------------|-----------|------------|-------------|--------------|--------------|--------------| 
 | Fold 1      | 95.672    | 77.451     | 99.763      | 95.844       | 90.62        | 99.11        |
@@ -82,14 +87,14 @@ Backbone: X-101-FPN
 | Fold 3      | 95.110    | 78.277     | 99.547      | 95.364       | 89.64        | 97.36        |
 | Fold 4      | 93.094    | 74.678     | 98.240      | 95.167       | 90.78        | 98.72        |
 
-### Cross Validation
+#### Cross Validation
 | Method     | Backbone | mAP   | Dice  | FPS  | AP.50  | AP.75 |
 |------------|----------|-------|-------|------|--------|-------|
 | Mask RCNN  | R-101    | 87.95 | 92.82 | 9.27 | 98.980 | 92.65 |
 | Mask RCNN  | X-101    | 91.28 | 94.34 | 8.16 | 98.980 | 94.36 |
 | Mask RCNN  | Swin_T   | 93.49 | 97.41 | 9.54 | 99.980 | 95.27 |
 
-#### For Different Class
+##### For Different Class
 | Backbone | AP for Uneven | AP for Uncover | AP for scratch | Dice for Uneven | Dice for Uncover | Dice for Scratch | 
 |----------|---------------|----------------|----------------|-----------------|------------------|------------------| 
 | R-101    | 85.03         | 80.41          | 97.78          | 90.26           | 89.42            | 98.80            |
