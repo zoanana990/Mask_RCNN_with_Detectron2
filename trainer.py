@@ -27,20 +27,20 @@ class Detector:
 
 
                 ## 4 Fold Training
-                self.cfg.DATASETS.TRAIN = ("ALL", )
-                self.test_dataset = "F2"
+                self.cfg.DATASETS.TRAIN = ("Example", )
+                self.test_dataset = "Example"
                 self.coco_test_metadata = MetadataCatalog.get(self.test_dataset)
                 self.cfg.DATASETS.TEST = (self.test_dataset, )
                 
-                self.cfg.DATALOADER.NUM_WORKERS = 2
+                self.cfg.DATALOADER.NUM_WORKERS = 0
 
                 
                 self.cfg.SOLVER.STEPS = []
-                self.cfg.SOLVER.IMS_PER_BATCH = 10
+                self.cfg.SOLVER.IMS_PER_BATCH = 1
                 num_gpu = 1
                 bs = (num_gpu * 2)
                 self.cfg.SOLVER.BASE_LR = 0.0002 * bs / 16  # pick a good LR
-                self.cfg.SOLVER.MAX_ITER = 80000    # 300 iterations seems good enough for this toy dataset; you may need to train longer for a practical dataset
+                self.cfg.SOLVER.MAX_ITER = 1000    # 300 iterations seems good enough for this toy dataset; you may need to train longer for a practical dataset
                 self.cfg.MODEL.ANCHOR_GENERATOR.SIZES = [[16], [48], [96], [216], [480]]  # One size for each in feature map
                 self.cfg.MODEL.ANCHOR_GENERATOR.ASPECT_RATIOS = [[0.1, 0.2, 0.5, 1, 2, 5, 10, 25, 50, 60, 70]] # Three aspect ratios (same for all in feature maps)
                 self.cfg.MODEL.ROI_HEADS.NUM_CLASSES = 3

@@ -95,21 +95,9 @@ def plot_samples(dataset_name, n=1):
 def regist_dataset():
 
     ## Regist Dataset
-    register_coco_instances(name="ALL", metadata={},
-                            json_file="Data/ALL_S280_COCO/annotations.json",
-                            image_root="Data/ALL_S280_COCO")
-
-    register_coco_instances(name="F1", metadata={},
-                            json_file="Data/Fold/F1/annotations.json", image_root="Data/Fold/F1")
-
-    register_coco_instances(name="F2", metadata={},
-                            json_file="Data/Fold/F2/annotations.json", image_root="Data/Fold/F2")
-
-    register_coco_instances(name="F3", metadata={},
-                            json_file="Data/Fold/F3/annotations.json", image_root="Data/Fold/F3")
-
-    register_coco_instances(name="F4", metadata={},
-                            json_file="Data/Fold/F4/annotations.json", image_root="Data/Fold/F4")
+    register_coco_instances(name="Example", metadata={},
+                            json_file="Data/COCO/annotations.json",
+                            image_root="Data/COCO")
 
 
 def progress_bar(progress, total, color=colorama.Fore.YELLOW):

@@ -32,7 +32,7 @@ python3 ./labelme/examples/instance_segmentation/labelme2coco.py <input/data/fol
 ```
 Example:
 ```
-python3 ./labelme/examples/instance_segmentation/labelme2coco.py ./Data/Example ./Data/Fold/COCO --labels ./labels.txt
+python3 ./labelme/examples/instance_segmentation/labelme2coco.py ./Data/Example ./Data/COCO --labels ./labels.txt
 ```
 labels.txt Format:
 ```
@@ -49,6 +49,16 @@ class2
 
 * The `'.json'` file will be generated to mask, 
 and we will use the `'label.png'` to compute dice coefficient
+
+Format:
+```python
+python3 convert_to_mask.py --src <source file path> --dst <destination> 
+```
+
+Example:
+```python
+python3 convert_to_mask.py --src ./Data/Example/ --dst ./Data/Mask/
+```
 
 #### Anchor Statistic
 Please use [preprocessing.py](./Data/preprocessing.py), which is used to do json resize, 
