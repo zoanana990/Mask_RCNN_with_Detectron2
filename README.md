@@ -11,7 +11,7 @@ Refer: [Detectron 2 Windows 10 Installation](https://hackmd.io/eMRVBXwPSLiE3nt_Z
 Linux:
 ```
 pip install torch==1.10.1+cu111 torchvision==0.11.2+cu111 torchaudio==0.10.1 -f https://download.pytorch.org/whl/torch_stable.html
-python -m pip install detectron2 -f   https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html
+pip install detectron2 -f   https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html
 pip install labelme, opencv-python, colorama, matplotlib
 ```
 
