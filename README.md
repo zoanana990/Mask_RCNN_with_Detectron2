@@ -15,7 +15,7 @@ pip install detectron2 -f   https://dl.fbaipublicfiles.com/detectron2/wheels/cu1
 pip install labelme opencv-python colorama matplotlib
 ```
 
-##
+## Usage
 ```
 git clone https://github.com/zoanana990/Mask_RCNN_with_Detectron2.git
 cd Mask_RCNN_with_Detectron2
