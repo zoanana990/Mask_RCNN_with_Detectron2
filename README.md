@@ -16,6 +16,7 @@ pip install labelme, opencv-python, colorama, matplotlib
 ```
 
 ## Dataset
+Using Labelme to annotate images and convert to COCO Format
 ```
 git clone https://github.com/wkentaro/labelme.git
 ```
@@ -39,13 +40,10 @@ class2
 ### Convert ground truth mask
 * use [convert_to_mask.py](./convert_to_mask.py)
 
-* ![img.png](Sample/img.png)
+  ![img.png](Sample/img.png)
 
 * The `'.json'` file will be generated to mask, 
 and we will use the `'label.png'` to compute dice coefficient
-
-### Dice Coefficient Computation
-use 
 
 ### Anchor Statistic
 Please use [preprocessing.py](./Data/preprocessing.py), which is used to do json resize, 
