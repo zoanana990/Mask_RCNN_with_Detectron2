@@ -78,6 +78,9 @@ json statistic, data augmentation, and so on...
 
     ![](./Sample/images/Binary_Mask.png)
 
+#### In our case
+| Input | Ground Truth | 
+
 ### Result
 #### Fold Training
 Backbone: X-101-FPN
